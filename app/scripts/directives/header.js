@@ -7,16 +7,21 @@
  * # header
  */
 angular.module('appLauncherApp')
-  .directive('appHeader', function (appHeight,  $rootScope) {
+  .directive('appHeader', function (appHeight,  $rootScope, appSearch) {
     return {
       templateUrl: '../../views/app-header.html',
       restrict: 'E',
       link: function postLink(scope, element, attrs) { // jshint ignore:line
 
-        element[0].addEventListener('click', function(){
+        element[0]
+          .querySelector('i')
+          .addEventListener('click', function(){
           $rootScope.$broadcast('directive:appSettings:toggle');
         });
-        //element.text('this is the header directive');
+
+        scope.model = {
+          appSearch: appSearch
+        };
       }
     };
   });

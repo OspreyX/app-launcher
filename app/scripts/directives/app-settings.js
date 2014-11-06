@@ -15,8 +15,6 @@ angular.module('appLauncherApp')
 
         var settingsPanel = element[0].querySelector('.settings');
 
-        //settingsPanel.style.top = -appHeight + 'px';
-
         return {
           post: function postLink(scope, element, attrs) { // jshint ignore:line
             var toggle = true;

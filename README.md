@@ -15,3 +15,15 @@ The OpenFin App Launcher is a window where you can easily access multiple apps b
 * Only includes apps participating in the OpenFin Launcher initiative
 
 * Applications provide a 30 day free trial access
+
+
+## How to run (for now...)
+
+* [create an OpenFin Application](https://github.com/openfin/generator-openfin)
+* point the `url` key in the `/public/app.json` to localhost:9000
+* create a directory to hold this project 
+* `$ git clone` this project into the created directory 
+* `$ npm install`
+* `$ bower install`
+* `$ grunt serve`
+* click on OpenFin app desktop shortcut 

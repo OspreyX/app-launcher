@@ -4,19 +4,26 @@
 $major-margin: 20px;
 $minor-margin: 10px;
 $panel-transition-duration: .5s;
-.browsehappy {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
-}
+$border-color: #ccc;
 
+html {
+   -webkit-app-region: drag;
+}
 /* Space out content a bit */
 body {
-  /*padding-top: 20px;*/
+
   padding-bottom: 20px;
   font-size: 1.5em;
-  /*z-index: 2;*/
+  user-select: none;
+}
+
+img, input, i {
+  -webkit-app-region: no-drag;
+}
+
+.col-xs-12 {
+  padding-right: 0;
+  padding-left: 0;
 }
 
 /* Custom page footer */
@@ -54,11 +61,23 @@ body {
 
   margin-bottom: $major-margin;
   z-index: 2;
-  background-color: silver;
+  border-bottom: 2px solid $border-color;
+  /*background-color: silver;*/
 
   .search {
-    flex: 11;
+    flex: 10;
     z-index: 2;
+
+    input {
+      /*border: 0 solid $border-color;*/
+      border: 0 solid #F7F2F2;
+      /*color: $border-color;*/
+    }
+    .input-group-addon {
+      border: 0 solid $border-color;
+      background-color: #fff;
+      color: $border-color;
+    }
   }
 
   .menu {
@@ -76,7 +95,8 @@ body {
       flex: 1;
 
       i {
-        font-size: 2.5rem
+        font-size: 2.1rem;
+        color: $border-color;
       }
     }
 
@@ -152,8 +172,9 @@ body {
 
 .settings {
   width: 100%;
-  height: 600px;
-  background-color: #f2f2f2;
+  height: 400px;
+  background-color: #fff;
+
   z-index: 1;
   position: absolute;
   transition-duration: $panel-transition-duration;
@@ -166,4 +187,19 @@ body {
 
 }
 
+.settings {
+  table {
+    th, td {
+      font-size: 1rem;
+      text-align: center;
+    }
+    img {
+      width: 20px;
+      float: left;
+    }
+/*    td:not(first-child){
+      text-align: center;
+    }*/
+  }
+}
 

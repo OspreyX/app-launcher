@@ -1,8 +1,8 @@
 
 <div class="row">
 
-  <div ng-repeat="app in model.apps" class="col-xs-4 app-icon" >
-    <div class="app-card">
+  <div ng-repeat="app in model.apps | filter:model.appSearch.searchString" class="col-xs-4 app-icon" >
+    <div class="app-card" ng-click="openApp(app, $index)">
       <div class="img">
         <img ng-src="{{app.img}}" alt="">
       </div>
@@ -11,5 +11,4 @@
       </div>
     </div>
   </div>
-
 </div>
