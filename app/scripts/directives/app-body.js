@@ -9,7 +9,7 @@
 angular.module('appLauncherApp')
   .directive('appBody', function (openFin, appSearch) {
     return {
-      templateUrl: '../../views/app-body.html',
+      templateUrl: 'views/app-body.html',
       restrict: 'E',
       link: function postLink(scope) {
         //element.text('this is the appBody directive');

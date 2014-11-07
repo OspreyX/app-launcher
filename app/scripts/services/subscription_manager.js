@@ -14,10 +14,6 @@ angular.module('appLauncherApp')
     fin.desktop.InterApplicationBus.subscribe('*',
         'sharedContext:subscribe',
       function () {
-       // console.log(arguments);
-        // var observerApp = observer.createObserver({
-        //     uuid: arguments[1]
-        // });
         sharedContext.addObserver(observer.createObserver({
             uuid: arguments[1]
         }));

@@ -9,7 +9,7 @@
 angular.module('appLauncherApp')
   .directive('appSettings', function ($rootScope, appHeight) { // jshint ignore:line
     return {
-      templateUrl: '../../views/app-settings.html',
+      templateUrl: 'views/app-settings.html',
       restrict: 'E',
       compile: function(element){
 
