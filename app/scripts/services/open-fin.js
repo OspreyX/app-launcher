@@ -1,4 +1,4 @@
-/* global fin*/
+
 'use strict';
 
 /**
@@ -16,7 +16,7 @@ angular.module('appLauncherApp')
         loadedFin;
 
     // for testing purposes we need to be able to have a fin object defined
-    var fin = fin || {};
+    var fin = fin || {}; //jshint ignore:line
     fin.desktop = fin.desktop || {
       main: angular.noop
     };

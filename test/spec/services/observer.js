@@ -31,9 +31,5 @@ describe('Service: observer', function () {
     });
   });
 
-  it('should produce an observable object with an update method',function(){
-    expect(observerInstance.update).toBeDefined();
-  });
-
 
 });
