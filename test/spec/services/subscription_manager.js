@@ -11,8 +11,8 @@ describe('Service: subscriptionManager', function () {
     subscriptionManager = _subscriptionManager_;
   }));
 
-  it('should do something', function () {
-    expect(!!subscriptionManager).toBe(true);
-  });
+  // it('should do something', function () {
+  //   expect(!!subscriptionManager).toBe(true);
+  // });
 
 });

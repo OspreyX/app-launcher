@@ -11,8 +11,8 @@ describe('Service: sharedContext', function () {
     sharedContext = _sharedContext_;
   }));
 
-  it('should do something', function () {
-    expect(!!sharedContext).toBe(true);
-  });
+  // it('should do something', function () {
+  //   expect(!!sharedContext).toBe(true);
+  // });
 
 });

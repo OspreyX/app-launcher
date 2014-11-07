@@ -54,6 +54,9 @@ angular.module('appLauncherApp')
       var observer = observerList.length;
 
       while(observer--){
+        console.log('this is the observer ');
+        console.log(observerList,observerList[observer]);
+
         observerList[observer].update({
           name: changed.name,
           oldValue: changed.oldValue,
@@ -85,6 +88,8 @@ angular.module('appLauncherApp')
         newValue: newSymbol
       });
     };
+
+    window.setAppSymbol = setAppSymbol;
 
     return {
       addObserver: addObserver,

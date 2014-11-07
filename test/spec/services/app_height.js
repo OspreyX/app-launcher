@@ -11,8 +11,8 @@ describe('Service: appHeight', function () {
     appHeight = _appHeight_;
   }));
 
-  it('should do something', function () {
-    expect(!!appHeight).toBe(true);
-  });
+  // it('should do something', function () {
+  //   expect(!!appHeight).toBe(true);
+  // });
 
 });

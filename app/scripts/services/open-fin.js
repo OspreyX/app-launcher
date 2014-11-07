@@ -12,7 +12,14 @@ angular.module('appLauncherApp')
   .provider('openFin', function () {
 
     var isReady = false,
-        pendingCallbacks = [];
+        pendingCallbacks = [],
+        loadedFin;
+
+    // for testing purposes we need to be able to have a fin object defined
+    var fin = fin || {};
+    fin.desktop = fin.desktop || {
+      main: angular.noop
+    };
 
     var whenReady = function(callback){
       if (isReady) {
@@ -64,6 +71,7 @@ angular.module('appLauncherApp')
 
     fin.desktop.main(function() {
       isReady = true;
+      loadedFin = fin;
 
       pendingCallbacks.forEach(function(callback){
         callback();
@@ -76,7 +84,8 @@ angular.module('appLauncherApp')
       $get: function(){
         return {
           whenReady: whenReady,
-          newOpenFinApplication: newOpenFinApplication
+          newOpenFinApplication: newOpenFinApplication,
+          fin: loadedFin
         };
       }//end $get
     };

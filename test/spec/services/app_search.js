@@ -11,8 +11,8 @@ describe('Service: appSearch', function () {
     appSearch = _appSearch_;
   }));
 
-  it('should do something', function () {
-    expect(!!appSearch).toBe(true);
-  });
+  // it('should do something', function () {
+  //   expect(!!appSearch).toBe(true);
+  // });
 
 });

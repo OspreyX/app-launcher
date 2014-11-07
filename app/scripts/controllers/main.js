@@ -9,5 +9,5 @@
  */
 angular.module('appLauncherApp')
   .controller('MainCtrl', function ($scope, subscriptionManager) {
-
+    console.log($scope, subscriptionManager);
   });

@@ -11,8 +11,8 @@ describe('Service: openFin', function () {
     openFin = _openFin_;
   }));
 
-  it('should do something', function () {
-    expect(!!openFin).toBe(true);
-  });
+  // it('should do something', function () {
+  //   expect(!!openFin).toBe(true);
+  // });
 
 });

@@ -11,8 +11,8 @@ describe('Service: constants', function () {
     constants = _constants_;
   }));
 
-  it('should do something', function () {
-    expect(!!constants).toBe(true);
-  });
+  // it('should do something', function () {
+  //   expect(!!constants).toBe(true);
+  // });
 
 });

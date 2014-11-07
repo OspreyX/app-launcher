@@ -11,8 +11,8 @@ describe('Service: includedApplications', function () {
     includedApplications = _includedApplications_;
   }));
 
-  it('should do something', function () {
-    expect(!!includedApplications).toBe(true);
-  });
+  // it('should do something', function () {
+  //   expect(!!includedApplications).toBe(true);
+  // });
 
 });
