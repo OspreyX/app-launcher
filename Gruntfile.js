@@ -341,6 +341,7 @@ module.exports = function (grunt) {
             '*.html',
             'views/{,*/}*.html',
             'images/{,*/}*.{webp}',
+            'images/{,*/}*.png',
             'fonts/*'
           ]
         }, {
@@ -360,6 +361,12 @@ module.exports = function (grunt) {
         cwd: '<%= yeoman.app %>/styles',
         dest: '.tmp/styles/',
         src: '{,*/}*.css'
+      },
+      imgNuke: {
+        expand: true,
+        cwd: 'app/images',
+        src: '{,*/}*.png',
+        dest: 'dist/images/'
       }
     },
 
@@ -430,7 +437,8 @@ module.exports = function (grunt) {
     'uglify',
     'filerev',
     'usemin',
-    'htmlmin'
+    'htmlmin',
+    'copy:imgNuke'
   ]);
 
   grunt.registerTask('default', [

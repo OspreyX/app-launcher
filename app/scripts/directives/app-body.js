@@ -17,37 +17,37 @@ angular.module('appLauncherApp')
           apps: [{
             name: 'Social Alpha',
             url: 'http://social-alpha.com/',
-            img: 'images/social-alpha.ico'
+            img: 'images/social-alpha.png'
           },
           {
             name: 'Chart IQ',
             url: 'http://connect2.chartiq.com/stx-advanced.html',
-            img: 'images/iq.ico'
+            img: 'images/iq.png'
           },
           {
             name: 'Chart IQ',
             url: 'http://connect2.chartiq.com/stx-advanced.html',
-            img: 'images/iq.ico'
+            img: 'images/iq.png'
           },
           {
             name: 'Social Alpha',
             url: 'http://social-alpha.com/',
-            img: 'images/social-alpha.ico'
+            img: 'images/social-alpha.png'
           },
           {
             name: 'Social Alpha',
             url: 'http://social-alpha.com/',
-            img: 'images/social-alpha.ico'
+            img: 'images/social-alpha.png'
           },
           {
             name: 'Chart IQ',
             url: 'http://connect2.chartiq.com/stx-advanced.html',
-            img: 'images/iq.ico'
+            img: 'images/iq.png'
           },
           {
             name: 'Social Alpha',
             url: 'http://social-alpha.com/',
-            img: 'images/social-alpha.ico'
+            img: 'images/social-alpha.png'
           }],
           appSearch: appSearch
         };
