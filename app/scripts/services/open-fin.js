@@ -1,3 +1,4 @@
+/*global fin*/
 'use strict';
 
 /**
@@ -14,13 +15,17 @@ angular.module('appLauncherApp')
         pendingCallbacks = [],
         loadedFin;
 
+
+    //console.log('this is the fin', fin);
     // for testing purposes we need to be able to have a fin object defined
-    var fin = fin || {}; //jshint ignore:line
-    fin.desktop = fin.desktop || {
-      main: angular.noop
-    };
+    //var fin = fin || {}; //jshint ignore:line
+    // fin.desktop = fin.desktop || {};
+    //   main: angular.noop
+    // };
+
 
     var whenReady = function(callback){
+      console.log('calling whenReady', callback);
       if (isReady) {
         callback();
       }
@@ -45,30 +50,31 @@ angular.module('appLauncherApp')
     };
 
 
-    var setIconTray = function(){
-      var currApp = fin.desktop.Application.getCurrent(),
-          currAppWindow = fin.desktop.Window.getCurrent(),
-          toggleShowHide = false;
+    // var setIconTray = function(){
+    //   var currApp = fin.desktop.Application.getCurrent(),
+    //       currAppWindow = fin.desktop.Window.getCurrent(),
+    //       toggleShowHide = false;
 
-      currApp.setTrayIcon(
-        'https://demoappdirectory.openf.in/desktop/config/apps/ChartIQ/ChartIQ/rvm/icon.png',
-        function(/*clickInfo*/){
-          var showHide = toggleShowHide ? 'show' : 'hide';
-          currAppWindow[showHide]();
-          toggleShowHide = !toggleShowHide;
-        },
-        function(){
-          console.log('success');
-        },
-        function(event){
-          console.log('fail', event);
-        });
+    //   currApp.setTrayIcon(
+    //     'https://demoappdirectory.openf.in/desktop/config/apps/ChartIQ/ChartIQ/rvm/icon.png',
+    //     function(/*clickInfo*/){
+    //       var showHide = toggleShowHide ? 'show' : 'hide';
+    //       currAppWindow[showHide]();
+    //       toggleShowHide = !toggleShowHide;
+    //     },
+    //     function(){
+    //       console.log('success');
+    //     },
+    //     function(event){
+    //       console.log('fail', event);
+    //     });
 
-    };
+    // };
 
 
 
     fin.desktop.main(function() {
+      console.log('IM READY!!!');
       isReady = true;
       loadedFin = fin;
 
@@ -76,7 +82,7 @@ angular.module('appLauncherApp')
         callback();
       });
 
-      setIconTray();
+      //setIconTray();
     });
 
     return {

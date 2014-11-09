@@ -1,4 +1,10 @@
 'use strict';
+window.fin = {
+  desktop: {
+    main: function(){}
+  }
+};
+
 
 describe('Service: observer', function () {
 

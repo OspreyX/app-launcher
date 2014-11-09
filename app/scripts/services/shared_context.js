@@ -54,8 +54,6 @@ angular.module('appLauncherApp')
       var observer = observerList.length;
 
       while(observer--){
-        console.log('this is the observer ');
-        console.log(observerList,observerList[observer]);
 
         observerList[observer].update({
           name: changed.name,
@@ -89,14 +87,27 @@ angular.module('appLauncherApp')
       });
     };
 
+    var addSymbolToWatchlist = function(symbol){
+      shared.watchlist.push({
+        name: symbol
+      });
+      notify({
+        name: 'watchlist',
+        newValue: symbol
+      });
+    };
+
     window.setAppSymbol = setAppSymbol;
+    window.observerList = observerList;
+    window.addSymbolToWatchlist = addSymbolToWatchlist;
 
     return {
       addObserver: addObserver,
       getAppSymbol: getAppSymbol,
       getWatchList: getWatchList,
       getCurrentUser: getCurrentUser,
-      setAppSymbol: setAppSymbol
+      setAppSymbol: setAppSymbol,
+      addSymbolToWatchlist: addSymbolToWatchlist
     };
 
   });

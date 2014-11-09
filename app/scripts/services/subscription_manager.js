@@ -1,4 +1,4 @@
-/* global fin*/
+
 'use strict';
 
 /**
@@ -10,8 +10,10 @@
  */
 angular.module('appLauncherApp')
  .service('subscriptionManager', function subscriptionManager(openFin, observer, sharedContext) {
+  console.log('subscribing...');
   openFin.whenReady(function(){
-    fin.desktop.InterApplicationBus.subscribe('*',
+    console.log('subscribing...AGAIN');
+    openFin.fin.desktop.InterApplicationBus.subscribe('*',
         'sharedContext:subscribe',
       function () {
         sharedContext.addObserver(observer.createObserver({
